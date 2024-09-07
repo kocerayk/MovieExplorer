@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #141414;
+  --assistant-color: #181818;
+  --accent-color: #e50914;
+  --text-color: #fff;
+  --rating-green: #46d369;
+  --rating-orange: #ffa31a;
+  --rating-red: #e50914;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--assistant-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  letter-spacing: 5px;
+  color: var(--accent-color);
+}
+
+.search {
+  background-color: var(--main-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s ease-in;
+}
+
+.search:focus {
+  outline: none;
+  transform: scale(1.05);
+}
+
+.search::placeholder {
+  color: #6c757d;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--assistant-color);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in;
+}
+
+.movie img {
+  width: 100%;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.movie-info h3 {
+  color: var(--text-color);
+}
+
+.movie-info span {
+  background-color: var(--assistant-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: var(--rating-green);
+}
+
+.movie-info span.orange {
+  color: var(--rating-orange);
+}
+
+.movie-info span.red {
+  color: var(--rating-red);
+}
+
+.overview {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--text-color);
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.5s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.overview h3 {
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+footer {
+  background-color: var(--assistant-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer h3 {
+  letter-spacing: 5px;
+  color: var(--accent-color);
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline;
+  margin-right: 1rem;
+}
+
+footer ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer small {
+  margin-top: 0.5rem;
+  color: #8197a4;
+  font-size: 0.8rem;
+}
